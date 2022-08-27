@@ -6,10 +6,13 @@ from urllib.request import urlopen as uReq
 
 app = Flask(__name__)
 
+
 @app.route('/',methods=['GET'])  # route to display the home page
 @cross_origin()
+
 def homePage():
     return render_template("index.html")
+
 
 @app.route('/review',methods=['POST','GET']) # route to show the review comments in a web UI
 @cross_origin()
